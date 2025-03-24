@@ -1,14 +1,14 @@
-import { useEffect } from "react";
-import { Outlet } from "react-router-dom";
-import { Layout } from "antd";
+import { getAuthorButtons } from "@/api/modules/login";
 import { setAuthButtons } from "@/redux/modules/auth/action";
 import { updateCollapse } from "@/redux/modules/menu/action";
-import { getAuthorButtons } from "@/api/modules/login";
+import { Layout } from "antd";
+import { useEffect } from "react";
 import { connect } from "react-redux";
-import LayoutMenu from "./components/Menu";
-import LayoutHeader from "./components/Header";
-import LayoutTabs from "./components/Tabs";
+import { Outlet } from "react-router-dom";
 import LayoutFooter from "./components/Footer";
+import LayoutHeader from "./components/Header";
+import LayoutMenu from "./components/Menu";
+import LayoutTabs from "./components/Tabs";
 import "./index.less";
 
 const LayoutIndex = (props: any) => {
