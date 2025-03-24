@@ -27,6 +27,7 @@ const LayoutIndex = (props: any) => {
 			return (() => {
 				let screenWidth = document.body.clientWidth;
 				if (!isCollapse && screenWidth < 1200) updateCollapse(true);
+
 				if (!isCollapse && screenWidth > 1200) updateCollapse(false);
 			})();
 		};
@@ -43,6 +44,7 @@ const LayoutIndex = (props: any) => {
 			<Sider trigger={null} collapsed={props.isCollapse} width={220} theme="dark">
 				<LayoutMenu></LayoutMenu>
 			</Sider>
+
 			<Layout>
 				<LayoutHeader></LayoutHeader>
 				<LayoutTabs></LayoutTabs>
